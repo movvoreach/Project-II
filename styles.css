@@ -1,0 +1,44 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #111;
+    overflow: hidden;
+  }
+  
+  /* Rotating Circle */
+  .circle {
+    width: 150px;
+    height: 150px;
+    border: 5px solid transparent; /* Transparent border for styling */
+    border-top: 5px solid #00ffcc; /* Top border with color */
+    border-radius: 50%;
+    animation: rotateCircle 3s linear infinite; /* Smooth rotation */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Hover Effect */
+  .circle:hover {
+    transform: scale(1.1);
+    animation-duration: 1.5s; /* Faster rotation on hover */
+  }
+  
+  /* Rotation Animation */
+  @keyframes rotateCircle {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
